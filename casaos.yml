@@ -1,0 +1,63 @@
+name: spark-docker
+services:
+  spark:
+    cpu_shares: 90
+    command:
+      - bash
+      - -c
+      - /opt/spark/sbin/start-master.sh;
+        /opt/spark/sbin/start-connect-server.sh; 
+        /opt/spark/sbin/start-worker.sh spark://192.168.1.7:7077; 
+        sleep infinity
+    deploy:
+      resources:
+        limits:
+          memory: 7868M
+    image: apache/spark:4.0.1
+    labels:
+      icon: https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg
+    ports:
+      - mode: ingress
+        target: 7077
+        published: "7077"
+        protocol: tcp
+      - mode: ingress
+        target: 8080
+        published: "8080"
+        protocol: tcp
+      - mode: ingress
+        target: 8081
+        published: "8081"
+        protocol: tcp
+      - mode: ingress
+        target: 15002
+        published: "15002"
+        protocol: tcp
+      - mode: ingress
+        target: 4040
+        published: "4040"
+        protocol: tcp
+    restart: unless-stopped
+    volumes: []
+    devices: []
+    cap_add: []
+    environment: []
+    networks:
+      - default
+    privileged: false
+    container_name: ""
+    hostname: ""
+networks:
+  default:
+    name: spark-docker_default
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg
+  index: /
+  is_uncontrolled: false
+  port_map: "4040"
+  scheme: http
+  title:
+    custom: Spark
