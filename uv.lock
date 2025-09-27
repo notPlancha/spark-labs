@@ -1345,14 +1345,12 @@ version = "0.1.0+dev"
 source = { virtual = "." }
 dependencies = [
     { name = "jupyter" },
-    { name = "pandas" },
     { name = "pyspark-client" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "jupyter", specifier = ">=1.1.1" },
-    { name = "pandas", specifier = ">=2.3.2" },
     { name = "pyspark-client", specifier = "==4.0.1" },
 ]
 
