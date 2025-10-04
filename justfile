@@ -1,9 +1,16 @@
+@setup:
+  uv sync
+
 @report LAB:
-  typst compile ./{{LAB}}/report/report.typ --root .
+  typst compile ./src/{{LAB}}/report/report.typ --root .
 
 @watch LAB:
-  typst watch ./{{LAB}}/report/report.typ --root .
+  typst watch ./src/{{LAB}}/report/report.typ --root .
 
 @open LAB:
   @just report {{LAB}}
-  start ./{{LAB}}/report/report.pdf
+  start ./src/{{LAB}}/report/report.pdf
+
+@archive:
+  @just report lab1
+  git archive -o labs.zip HEAD

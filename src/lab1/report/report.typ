@@ -65,9 +65,9 @@ $ docker compose up -d
 #pagebreak()
 
 = Task 1
-#callisto.render(nb: json("/lab1/task1.ipynb"))
+#callisto.render(nb: json("/src/lab1/task1.ipynb"))
 
 #pagebreak()
 
 = Task 2
-#callisto.render(nb: json("/lab1/task2.ipynb"))
+#callisto.render(nb: json("/src/lab1/task2.ipynb"))

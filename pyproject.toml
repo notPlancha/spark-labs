@@ -1,7 +1,7 @@
 [project]
-name = "spark-lab"
-version = "0.1.0+dev"
-description = "Labs for learning Apache Spark"
+name = "spark-labs"
+version = "1.0.0"
+description = "A collection of hands-on labs for learning Apache Spark and big data analytics on cloud computing infrastructures."
 readme = "README.md"
 requires-python = ">=3.10, <3.11"
 dependencies = [
