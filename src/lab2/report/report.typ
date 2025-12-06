@@ -22,8 +22,8 @@
 #show raw.where(lang:"txt"): local.with(display-name: false, display-icon: false, zebra-fill: luma(98%))
 #show heading.where(level: 1): set text(size: 25pt)
 
-#let title = "Spark Lab 1 Report"
-#let subtitle = "Introduction to PySpark and Spark SQL"
+#let title = "Spark Lab 2 Report"
+#let subtitle = "Building a Streaming Data Pipeline with Apache Spark"
 #let author = "André Plancha"
 #let email = "andre.plancha@hotmail.com"
 #{
@@ -101,10 +101,4 @@ $ docker compose up -d
 
 #pagebreak()
 
-= Task 1
-#callisto.render(nb: json("/src/lab1/task1.ipynb"))
-
-#pagebreak()
-
-= Task 2
-#callisto.render(nb: json("/src/lab1/task2.ipynb"))
+#callisto.render(nb: json("/src/lab2/tasks.ipynb"))
