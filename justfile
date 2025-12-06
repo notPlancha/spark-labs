@@ -19,3 +19,7 @@ set shell := ["cmd.exe", "/c"]
 @archive:
   @just report lab1
   git archive -o labs.zip HEAD
+
+@stream:
+  echo "start streaming"
+  ssh plancha@192.168.1.7 -t /usr/bin/nc -lk 9999
