@@ -73,18 +73,11 @@ spark.stop()
 # =========================================================
 
 import os
-import findspark
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, isnull, when, count
 from pyspark.ml.feature import StringIndexer, VectorAssembler
 from pyspark.ml.classification import RandomForestClassifier
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
-
-#--- 2.1 Environment Setup  ---
-# (Note: Paths are specific to the Colab environment in the slides)
-# os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
-# path_to_spark = '/content/spark-3.4.1-bin-hadoop3'
-# findspark.init(path_to_spark)
 
 #--- 2.2 Initialize SparkSession  ---
 spark = SparkSession.builder \
@@ -191,7 +184,7 @@ spark = SparkSession.builder \
 df = spark.read \
     .format("csv") \
     .option("header", "true") \
-    .load("/content/drive/MyDrive/big data course/titanic dataset/train.csv")
+    .load("titanic.csv")
 
 #--- 3.2 Define Pipeline Stages  ---
 # Split data
