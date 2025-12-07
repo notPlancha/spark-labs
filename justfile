@@ -17,7 +17,6 @@ set shell := ["cmd.exe", "/c"]
   jupyter nbconvert --to python {{FILE}}
 
 @archive:
-  @just report lab1
   git archive -o labs.zip HEAD
 
 @stream:
