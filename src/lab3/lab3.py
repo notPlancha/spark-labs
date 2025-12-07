@@ -97,7 +97,7 @@ spark = SparkSession.builder \
 df = spark.read \
     .format("csv") \
     .option("header", "true") \
-    .load("/content/drive/MyDrive/big data course/titanic dataset/train.csv")
+    .load("titanic.csv")
 
 df.show(5)
 
