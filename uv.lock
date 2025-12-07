@@ -1346,12 +1346,22 @@ source = { virtual = "." }
 dependencies = [
     { name = "jupyter" },
     { name = "pyspark-client" },
+    { name = "sparkdl" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "jupyter", specifier = ">=1.1.1" },
     { name = "pyspark-client", specifier = "==4.0.1" },
+    { name = "sparkdl", specifier = ">=0.2.2" },
+]
+
+[[package]]
+name = "sparkdl"
+version = "0.2.2"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/70/e6/c520f801b945f3d03dbf47e1abb7a454cda328d1592f9854dcec69bed097/sparkdl-0.2.2-py3-none-any.whl", hash = "sha256:78b8ea6749dbb416b83906577c87d6bf4a27600ff7177dd8d2689a5ff33b07dd", size = 99656 },
 ]
 
 [[package]]

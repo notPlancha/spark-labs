@@ -7,4 +7,5 @@ requires-python = ">=3.10, <3.11"
 dependencies = [
   "jupyter>=1.1.1",
   "pyspark-client==4.0.1",
+  "sparkdl>=0.2.2",
 ]
