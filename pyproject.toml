@@ -9,3 +9,6 @@ dependencies = [
   "pyspark-client==4.0.1",
   "sparkdl>=0.2.2",
 ]
+
+[tool.ruff]
+indent-width = 2
